@@ -31,7 +31,7 @@ export const ContactForm = () => {
         <input
           className={s.input}
           type="text"
-          placeholder="Evgen Vlasov"
+          placeholder="Evgen Usov"
           name="name"
           {...register('name', {
             required: `This field is required`,
