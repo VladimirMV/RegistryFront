@@ -72,7 +72,8 @@ export const ContactItem = ({ name, number, id }) => {
                   <ListItemAvatar>
                       <Tooltip label="Click" color="#000" fontSize="xs">
             <ModalPictureWrapper> 
-               <Avatar
+                              <Avatar
+              sx={{fontSize:"12px"}}
               onClick={() => setModalData(id)}
               {...stringAvatar(Object.values(name).join(''))}
             />

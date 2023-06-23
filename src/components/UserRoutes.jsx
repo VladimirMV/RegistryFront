@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { SharedLayout } from 'modules/SharedLayout';
 import { RestrictedRoute } from './RestrictedRoute';
