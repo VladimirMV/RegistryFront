@@ -1,21 +1,27 @@
 
-import Container from './components/Container/Container';
-import { ContactForm } from './components/ContactForm/ContactForm';
-import Filter from './components/Filter/Filter';
-import ContactList from './components/ContactList/ContactList';
+import UserRoutes from './components/UserRoutes';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getCurrentUser } from 'redux/auth/auth-operations';
+import { useAuth } from 'hooks/useAuth';
+import { Loader } from './components/Loader/Loader';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
+console.log("isRefreshing",isRefreshing);
+  useEffect(() => {
+    dispatch(getCurrentUser());
+    console.log("getCurrentUser()",getCurrentUser());
+  }, [dispatch]);
+
   return (
-    <Container>
-      <h1>Phonebook</h1>
-      <ContactForm />
-        
-          <h2>Contacts</h2>
-          <Filter />
-          <ContactList />
-        
-    </Container>
+    <>
+      {isRefreshing && <Loader/>}
+      {!isRefreshing && <UserRoutes />}
+    </>
   );
-}
+};
+
 
 export default App;

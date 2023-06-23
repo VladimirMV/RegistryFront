@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import * as api from 'services/API';
+import * as api from 'services/contactsApi';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
@@ -61,6 +61,21 @@ export const deleteContact = createAsyncThunk(
       // alert(`Contact delete`);
 
       return id;
+    } catch ({ response }) {
+      return rejectWithValue(`Ooops! Wrong... Try again or update browser`);
+    }
+  }
+);
+
+export const changeContact = createAsyncThunk(
+  'contacts/editContact',
+  async (data, { rejectWithValue }) => {
+    try {
+      const { data: result } = await api.editContact(data);
+
+      alert(`Contact update!`);
+      // console.log(result);
+      return result;
     } catch ({ response }) {
       return rejectWithValue(`Ooops! Wrong... Try again or update browser`);
     }

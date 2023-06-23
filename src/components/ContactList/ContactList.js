@@ -13,7 +13,7 @@ import {
 } from 'redux/selectors';
 
 import Loader from 'components/Loader/Loader';
-import { deleteContact } from 'redux/contacts/contacts-operations';
+import { ContactItem } from 'components/ContactItem/ContactItem1';
 
 function ContactList() {
   const contacts = useSelector(selectContacts);
@@ -38,10 +38,6 @@ function ContactList() {
 
   const filteredContacts = getFilteredContacts(result);
 
-  const onDeleteContact = contactId => {
-    dispatch(deleteContact(contactId));
-  };
-
   return (
     <>
       {isLoading && contacts?.length === 0 && <Loader />}
@@ -53,16 +49,17 @@ function ContactList() {
         <ul className={s.list}>
           {filteredContacts.map(({ name, number, id }) => {
             return (
-              <li className={s.item} key={id}>
-                <p className={s.info}>
-                  {name}: {number}
-                </p>
-                <button
-                  className={s.btn}
-                  type="button"
-                  onClick={() => onDeleteContact(id)}
-                />
-              </li>
+              // <li className={s.item} key={id}>
+              //   <p className={s.info}>
+              //     {name}: {number}
+              //   </p>
+              //   <button
+              //     className={s.btn}
+              //     type="button"
+              //     onClick={() => onDeleteContact(id)}
+              //   />
+              // </li>
+              <ContactItem name={name} number={number} id={id} />
             );
           })}
         </ul>
