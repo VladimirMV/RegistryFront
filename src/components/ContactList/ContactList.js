@@ -50,16 +50,6 @@ function ContactList() {
           <ul>
             {filteredContacts.map(({ name, number, id }) => {
               return (
-                // <li className={s.item} key={id}>
-                //   <p className={s.info}>
-                //     {name}: {number}
-                //   </p>
-                //   <button
-                //     className={s.btn}
-                //     type="button"
-                //     onClick={() => onDeleteContact(id)}
-                //   />
-                // </li>
                 <Fragment key={id}>
                   <ContactItem name={name} number={number} id={id} />
                 </Fragment>

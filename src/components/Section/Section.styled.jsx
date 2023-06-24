@@ -6,7 +6,7 @@ export const SectionWrapper = styled.section`
   align-items: center;
   justify-content: center;
   // padding-top: ${props => props.theme.space[4]}px;
-  // // padding-bottom: ${props => props.theme.space[4]}px;
+  padding-bottom: ${props => props.theme.space[4]}px;
   // padding-bottom: 20px;
   // margin-bottom: 5px;
   max-width: 100%;

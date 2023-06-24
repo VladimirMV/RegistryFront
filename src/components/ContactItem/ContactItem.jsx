@@ -67,7 +67,7 @@ export const ContactItem = ({ name, number, id }) => {
   return (
     <Container maxWidth="md" marginLeft= "0" paddingLeft ="0" >
      
-      <List sx={{  width: "400px", marginLeft: 0, paddingLeft: 0, fontSize: "8px" }}>
+      <List sx={{  width: "450px", marginLeft: 0, paddingLeft: 0, fontSize: "8px" }}>
         { <ListItem key={id}> 
          <Tooltip label="Click" color="#000" fontSize="xs">      
               <ListItemAvatar>

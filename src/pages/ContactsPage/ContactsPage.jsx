@@ -55,7 +55,7 @@ const Contacts = () => {
           elevation={24}
           square
           sx={{
-            height: '99%',
+            height: '100%',
             background: '#e5f1d7',
             backdropFilter: 'blur(7.5px)',
           }}
@@ -63,7 +63,7 @@ const Contacts = () => {
           <Box
             sx={{
               my: 8,
-              mx: 4,
+              mx: 3,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',

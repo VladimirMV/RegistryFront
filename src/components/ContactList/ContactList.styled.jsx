@@ -4,8 +4,8 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-top: ${p => p.theme.space[3]}px;
-  padding-bottom: ${p => p.theme.space[3]}px;
+  padding-top: ${p => p.theme.space[1]}px;
+  padding-bottom: ${p => p.theme.space[1]}px;
   padding-left: ${p => p.theme.space[2]}px;
   padding-right: ${p => p.theme.space[2]}px;
   max-width: 100%;
