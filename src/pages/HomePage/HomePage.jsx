@@ -63,7 +63,7 @@ const Home = () => {
             }}
           >
             <Grid container spacing={2}>
-              <Section title="Welcome to Phonebook!">
+              <Section title=" Phonebook!">
                 <Advertising
                   text="PhoneBook is an application that allows you to keep a contact book. You can add, edit and delete entries.
 Enjoy using the app."

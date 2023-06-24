@@ -9,10 +9,8 @@ import { Loader } from './components/Loader/Loader';
 const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
-console.log("isRefreshing",isRefreshing);
   useEffect(() => {
     dispatch(getCurrentUser());
-    console.log("getCurrentUser()",getCurrentUser());
   }, [dispatch]);
 
   return (

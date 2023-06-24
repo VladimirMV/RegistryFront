@@ -55,8 +55,8 @@ const Contacts = () => {
           elevation={24}
           square
           sx={{
-            height: '100%',
-            background: '#dfcece99',
+            height: '99%',
+            background: '#e5f1d7',
             backdropFilter: 'blur(7.5px)',
           }}
         >

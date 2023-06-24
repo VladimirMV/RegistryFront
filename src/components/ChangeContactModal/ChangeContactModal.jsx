@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Formik } from 'formik';
 import 'yup-phone';
 
-// redux
 import { BsFillTelephoneFill, BsPersonFill } from 'react-icons/bs';
 import { IoMdPersonAdd } from 'react-icons/io';
 import { schema } from 'services/schemaYup';
@@ -51,6 +50,7 @@ export const ChangeContactModal = ({
   const onSubmitHandler = (values, { resetForm }) => {
     const newFormValues = { ...formValues, ...values };
     setFormValues(newFormValues);
+    console.log("newFormValues",newFormValues)
     dispatch(changeContact(newFormValues));
     resetForm();
     closeModal();
@@ -74,7 +74,7 @@ export const ChangeContactModal = ({
           validationSchema={schema}
         >
           {formik => {
-            // console.log('Formik props', formik);
+           ;
             return (
               <Form autoComplete="off">
                 <FormField>
@@ -93,7 +93,7 @@ export const ChangeContactModal = ({
                   <FieldFormik
                     type="tel"
                     name="number"
-                    placeholder="+38-050-123-45-67"
+                    placeholder="+38-050-936-44-77"
                   />
                   <ErrorMessage name="number" component="span" />
                 </FormField>

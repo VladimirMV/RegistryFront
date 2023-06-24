@@ -57,7 +57,7 @@ export const ContactModal = ({ isOpen, data, onClose }) => {
         <p>{data?.name}</p>
         <Tooltip label="Call" hasArrow bg="gray.300" color="#000" fontSize="xs">
           <p>
-            <a href={'tel:' + data?.phone}>{data?.number}</a>
+            <a href={'tel:' + data?.number}>{data?.number}</a>
           </p>
         </Tooltip>
       </PictureDescr>

@@ -73,11 +73,11 @@ export const changeContact = createAsyncThunk(
     try {
       const { data: result } = await api.editContact(data);
 
-      alert(`Contact update!`);
+      // alert(`Contact update!`);
       // console.log(result);
       return result;
     } catch ({ response }) {
-      return rejectWithValue(`Ooops! Wrong... Try again or update browser`);
+      return rejectWithValue(` Wrong... Try again `);
     }
   }
 );

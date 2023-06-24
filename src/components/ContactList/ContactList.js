@@ -1,5 +1,4 @@
-import s from './ContactList.module.css';
-import { useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // redux
@@ -13,7 +12,8 @@ import {
 } from 'redux/selectors';
 
 import Loader from 'components/Loader/Loader';
-import { ContactItem } from 'components/ContactItem/ContactItem1';
+import { List, Info } from './ContactList.styled';
+import { ContactItem } from 'components/ContactItem/ContactItem';
 
 function ContactList() {
   const contacts = useSelector(selectContacts);
@@ -43,26 +43,30 @@ function ContactList() {
       {isLoading && contacts?.length === 0 && <Loader />}
       {error && !isLoading && <div>Ooops, error...</div>}
       {!filteredContacts?.length && !error && !isLoading && (
-        <div className={s.error}> Contacts not found</div>
+        <Info>Contacts not found</Info>
       )}
       {!error && !isLoading && filteredContacts?.length > 0 && (
-        <ul className={s.list}>
-          {filteredContacts.map(({ name, number, id }) => {
-            return (
-              // <li className={s.item} key={id}>
-              //   <p className={s.info}>
-              //     {name}: {number}
-              //   </p>
-              //   <button
-              //     className={s.btn}
-              //     type="button"
-              //     onClick={() => onDeleteContact(id)}
-              //   />
-              // </li>
-              <ContactItem name={name} number={number} id={id} />
-            );
-          })}
-        </ul>
+        <List>
+          <ul>
+            {filteredContacts.map(({ name, number, id }) => {
+              return (
+                // <li className={s.item} key={id}>
+                //   <p className={s.info}>
+                //     {name}: {number}
+                //   </p>
+                //   <button
+                //     className={s.btn}
+                //     type="button"
+                //     onClick={() => onDeleteContact(id)}
+                //   />
+                // </li>
+                <Fragment key={id}>
+                  <ContactItem name={name} number={number} id={id} />
+                </Fragment>
+              );
+            })}
+          </ul>
+        </List>
       )}
     </>
   );
