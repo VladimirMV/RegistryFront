@@ -19,3 +19,10 @@ export const Info = styled.div`
   padding-right: ${p => p.theme.space[4]}px;
   text-align: center;
 `;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+`;

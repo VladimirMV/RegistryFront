@@ -66,7 +66,7 @@ const Home = () => {
               <Section title=" Phonebook!">
                 <Advertising
                   text="PhoneBook is an application that allows you to keep a contact book. You can add, edit and delete entries.
-Enjoy using the app."
+Enjoy using PhoneBook"
                 />
               </Section>
             </Grid>
@@ -78,3 +78,11 @@ Enjoy using the app."
 };
 
 export default Home;
+
+// This code imports several components and modules from the Material UI library. 
+// It then defines a default theme for the application and creates a Home component that includes 
+// a Material UI Grid and Paper component.The Grid component is used to structure the main layout 
+// of the page, with the background image and other styling settings defined as properties.
+// The Paper component is used to display a white panel on the right side of the page.Inside this panel,
+// there is a box with some text and a Section component with a Advertising component as its child.Finally, 
+// the Home component is exported as the default export of this file.

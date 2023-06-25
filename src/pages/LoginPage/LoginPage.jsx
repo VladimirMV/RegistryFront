@@ -182,3 +182,21 @@ export default function Login() {
     </ThemeProvider>
   );
 }
+// This code imports various UI components from the Material - UI library, including Avatar, Button,
+// TextField, Checkbox, Paper, Box, Grid, LockOutlinedIcon, and Typography.It also imports functions 
+// from other modules including createTheme and useDispatch.
+
+// The code defines a function called Login, which is exported as the default. Within this function, 
+// the useDispatch hook is called to define a dispatch function and the useLocation hook is called to retrieve the current URL.
+
+// The function checks whether the current URL is '/login' and sets a flag called onSignIn accordingly. 
+// It also defines state for empty email and password fields.
+
+// When the form is submitted, the function retrieves the entered user data and checks if the email
+// and / or password fields are empty.If either is empty, the corresponding empty state flag is updated 
+// and the function returns without dispatching an action.Otherwise, it dispatches an action to log in the user.
+
+// The function returns a UI component that displays a login form with various fields for entering user data. 
+// The component is styled using the Material - UI library and includes custom styles for various UI elements.
+// The component is also wrapped in a ThemeProvider component to provide a default theme for all 
+// the Material - UI components it uses.

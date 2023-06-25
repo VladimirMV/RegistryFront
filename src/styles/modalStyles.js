@@ -1,6 +1,6 @@
 export const customStyles = {
   overlay: {
-    backgroundColor: 'rgba(142,154,175, 0.9)',
+    backgroundColor: '#e5f1d7',
     zIndex: 1300,
   },
   content: {

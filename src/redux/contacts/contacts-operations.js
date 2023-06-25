@@ -9,9 +9,7 @@ export const fetchContacts = createAsyncThunk(
       const { data } = await api.getAllContacts();
       return data;
     } catch ({ response }) {
-      return thunkAPI.rejectWithValue(
-        `Ooops! Wrong... Try again or update browser`
-      );
+      return thunkAPI.rejectWithValue(`Ooops! Wrong... Try again ...`);
     }
   }
 );
@@ -36,7 +34,7 @@ export const addContact = createAsyncThunk(
       // alert(`Add contact`);
       return result;
     } catch ({ response }) {
-      return rejectWithValue(`Ooops! Wrong... Try again or update browser`);
+      return rejectWithValue(`Ooops! Wrong... Try again ...`);
     }
   },
 
@@ -62,7 +60,7 @@ export const deleteContact = createAsyncThunk(
 
       return id;
     } catch ({ response }) {
-      return rejectWithValue(`Ooops! Wrong... Try again or update browser`);
+      return rejectWithValue(`Ooops! Wrong... Try again ...`);
     }
   }
 );

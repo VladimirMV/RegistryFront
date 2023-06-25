@@ -1,5 +1,5 @@
 import React from 'react';
-// import { PageNf, Wrap } from './PageNotFound.styled';
+
 
 const PageNotFound = () => {
   return (

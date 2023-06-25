@@ -171,7 +171,7 @@ export default function Register() {
                     control={
                       <Checkbox value="allowExtraEmails" color="primary" />
                     }
-                    label="I want to receive inspiration, marketing promotions and updates via email."
+                    label="I want to receive  marketing promotions and updates via email."
                   />
                   <Button
                     type="submit"
@@ -200,3 +200,19 @@ export default function Register() {
     </ThemeProvider>
   );
 }
+// This code imports several elements from the Material - UI library, including
+// Avatar, Button, TextField, FormControlLabel, Checkbox, Paper, Grid, Box, LockOutlinedIcon, Typography,
+// createTheme, ThemeProvider, Link, useLocation, useDispatch, and useState.
+
+// It defines a functional component named "Register" that handles user registration and includes a form
+// with fields for name, email, and password.It also includes a checkbox for opting into email promotions 
+// and updates, as well as a link to the login page.
+
+// When the user submits the form, the component checks to ensure that the name and email fields are not empty,
+// and that the password field contains at least seven characters.If any of these criteria are not met, the component 
+// sets error states and prevents the form from being submitted.
+
+// If the form is submitted successfully, the component triggers a Redux action to register the user using the provided information.
+
+// Finally, the component renders a Material-UI Grid, Paper, Avatar, and other elements to create a standardized user interface for 
+//the registration form.The appearance of the elements is defined using inline CSS styling.

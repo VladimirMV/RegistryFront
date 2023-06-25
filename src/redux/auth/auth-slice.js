@@ -93,3 +93,19 @@ const persistedAuthReducer = persistReducer(
 
 export const authReducer = authSlice.reducer;
 export default persistedAuthReducer;
+
+// This code imports libraries and functions for managing user authentication
+// within a Redux store.It creates a slice of the store by using createSlice()
+// from the @reduxjs/toolkit library. It sets an initial state for user authentication
+// that includes an empty user object, no token, and a logged out status.
+
+// The extraReducers parameter in the createSlice() creates reducers based on the
+// different actions it receives from the Redux store.The addMatcher is a utility function
+// for creating reducers that listen to many actions at once.
+
+// The authPersistConfig object is a configuration object for the persistReducer() function,
+//   which is used to persist the authentication slice of the store to browser storage using redux - persist.
+
+//   Finally, the code exports two reducers: authReducer, which is just the reducer
+// for the authentication slice, and persistedAuthReducer, which is the same reducer but
+// with redux - persist functionality added.

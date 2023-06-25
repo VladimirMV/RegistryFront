@@ -2,9 +2,9 @@
 
 :root {
   --primaryTextColor: #212121;
-  --secondaryTextColor: #566573;
-  --accentColor: #778d45;
-  --bgColor: #e5f1d7;
+  --secondaryTextColor: rgb(86, 101, 115);
+  --accentColor: rgb(119, 141, 69);
+  --bgColor: rgb(130, 181, 71);
   /* --boxShadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12); */
   --boxShadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,

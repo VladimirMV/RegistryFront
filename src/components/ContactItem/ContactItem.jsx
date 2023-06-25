@@ -65,9 +65,9 @@ export const ContactItem = ({ name, number, id }) => {
  
  
   return (
-    <Container maxWidth="md" marginLeft= "0" paddingLeft ="0" >
+    <Container maxWidth="md"  >
      
-      <List sx={{  width: "450px", marginLeft: 0, paddingLeft: 0, fontSize: "8px" }}>
+      <List sx={{  width: "450px", marginLeft: 0, paddingLeft: 0 }}>
         { <ListItem key={id}> 
          <Tooltip label="Click" color="#000" fontSize="xs">      
               <ListItemAvatar>
@@ -75,8 +75,10 @@ export const ContactItem = ({ name, number, id }) => {
                               <Avatar
               sx={{fontSize:"12px"}}
               onClick={() => setModalData(id)}
-              {...stringAvatar(Object.values(name).join(''))}
+                  {...stringAvatar(Object.values(name).join(''))}
+                  
             />
+            
               </ModalPictureWrapper>                        
                       </ListItemAvatar>
           </Tooltip> 

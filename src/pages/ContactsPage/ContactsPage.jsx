@@ -63,7 +63,7 @@ const Contacts = () => {
           <Box
             sx={{
               my: 8,
-              mx: 3,
+              mx: 2,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -86,3 +86,12 @@ const Contacts = () => {
 };
 
 export default Contacts;
+// This code imports several components from the Material - UI library, as well as
+// custom components from the 'components/' folder.A defaultTheme is created using the 
+// createTheme function from Material - UI, which sets the primary and secondary colors for the app.
+
+// The Contacts component defines a layout for the app, which includes a background image 
+// and a main section containing a form for adding contacts, a list of contacts, and a filter for the list.
+
+// The code returns the layout defined with Material - UI components, wrapped in the defaultTheme. 
+// The exported Contacts component can then be used elsewhere in the app.

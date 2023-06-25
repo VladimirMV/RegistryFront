@@ -16,6 +16,8 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
+ 
+
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
  
@@ -55,7 +57,9 @@ const Header = () => {
           }}
         >
           <Link to="/" sx={{ alignItems: 'center',
-            justifyContent: 'center' }}>
+            justifyContent: 'center',
+            backdropFilter: 'blur(7.5px)',
+          }}>
             <img src={Logo} alt="logo" width={48} />
           </Link>
         </Typography>
@@ -107,7 +111,10 @@ const Header = () => {
               sx={{ my: 2, display: { xs: 'none', sm: 'block' } }}
             >
               <Link to="/"  sx={{ alignItems: 'center',
-                              justifyContent: 'center', padding: "10px"  }}>
+                justifyContent: 'center', padding: "10px",
+                backdropFilter: 'blur(7.5px)',
+                boxShadow: "6",
+              }}>
                 <img src={Logo} alt="logo" width={48} />
               </Link>
             </Typography>
@@ -158,3 +165,16 @@ const Header = () => {
 };
 
 export default Header;
+
+// This is a React component that defines the website header.It imports several components from 
+// other modules: AppBar, Nav, NavBlock, UserBlock, NavbarAuth, UserMenu, Navigation and Logo, as well 
+// as styles from MUI package.It also imports a custom hook, useAuth.
+
+// The component defines a state for mobile menu visibility using useState hook.It provides a function
+// to toggle this state.It uses this state and the imported components to define the header UI:
+
+// A header logo that links to the homepage
+// A navigation component, with menu/drawer hidden for small screens, and a button to toggle its visibility
+// A user component, depending on whether the user is logged in or not
+// A mobile menu/drawer that opens when the user clicks on the toggle button
+// The component exports a default Header component that can be used in the website's App.js file, or in other components.
