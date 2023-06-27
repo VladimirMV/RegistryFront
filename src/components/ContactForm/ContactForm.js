@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/contacts-operations';
 import s from './ContactForm.module.css';
-
+import { selectContacts } from 'redux/selectors';
 export const ContactForm = () => {
   const {
     register,
@@ -12,11 +12,26 @@ export const ContactForm = () => {
   } = useForm({
     mode: 'onBlur',
   });
-
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
+  const isDublicate = (contacts, { name, number }) => {
+    const normalizedName = name.toLowerCase().trim();
+    const normalizedNumber = number.trim();
+
+    const dublicate = contacts.some(
+      contact =>
+        contact.name.toLowerCase().trim() === normalizedName ||
+        contact.number.trim() === normalizedNumber
+    );
+    return dublicate;
+  };
+
   const onAddContact = data => {
-    console.log('data', data, addContact(data));
+    if (isDublicate(contacts, data)) {
+      alert(`This contact is already in contacts!`);
+      return false;
+    }
     dispatch(addContact(data));
   };
   const onSubmitHandler = values => {

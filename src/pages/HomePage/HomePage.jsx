@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Section } from 'components/Section/Section';
-
+import { customStylesFonHome } from 'styles/fonStyle';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Advertising } from 'components/Advertising/Advertising';
 
@@ -24,10 +24,9 @@ const Home = () => {
       <Grid
         container
         component="main"
+        style={customStylesFonHome }
         sx={{
           height: '100vh',
-          // backgroundImage: `url("https://phonoteka.org/uploads/posts/2022-02/1644833484_32-phonoteka-org-p-fon-dlya-prezentatsii-gradient-nezhnii-32.jpg")`,
-          backgroundImage: `url("https://catherineasquithgallery.com/uploads/posts/2023-02/thumbs/1676737003_catherineasquithgallery-com-p-svetlo-salatovii-fon-87.jpg")`,
           backgroundRepeat: 'no-repeat',
           backgroundColor: t =>
             t.palette.mode === 'light'

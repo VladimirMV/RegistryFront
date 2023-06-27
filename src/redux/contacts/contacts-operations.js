@@ -14,18 +14,6 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-const isDublicate = (contacts, { name, number }) => {
-  const normalizedName = name.toLowerCase().trim();
-  const normalizedNumber = number.trim();
-
-  const dublicate = contacts.some(
-    contact =>
-      contact.name.toLowerCase().trim() === normalizedName ||
-      contact.number.trim() === normalizedNumber
-  );
-  return dublicate;
-};
-
 export const addContact = createAsyncThunk(
   'contacts/addContact',
   async (data, { rejectWithValue }) => {
@@ -36,18 +24,6 @@ export const addContact = createAsyncThunk(
     } catch ({ response }) {
       return rejectWithValue(`Ooops! Wrong... Try again ...`);
     }
-  },
-
-  {
-    condition: (data, { getState }) => {
-      const {
-        contacts: { items },
-      } = getState();
-      if (isDublicate(items, data)) {
-        alert(`This contact is already in contacts!`);
-        return false;
-      }
-    },
   }
 );
 

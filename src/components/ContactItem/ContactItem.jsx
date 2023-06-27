@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types'
 import { Tooltip } from '@chakra-ui/react';
 import {
@@ -27,14 +27,14 @@ import { ContactModal } from 'components/Modal/Modal';
 
 // redux
 import { deleteContact } from 'redux/contacts/contacts-operations';
-import { selectContacts } from 'redux/selectors';
+ 
 
 // style
 // import { IoPersonRemove } from 'react-icons/io5';
 
 export const ContactItem = ({ name, number, id }) => {
  
-  const contacts = useSelector(selectContacts);
+  
   const [selectedContact, setSelectedContact] = useState(null);
 
   const dispatch = useDispatch();
@@ -46,10 +46,11 @@ export const ContactItem = ({ name, number, id }) => {
   const closeModal = () => {
     setSelectedContact(null);
   };
-
-  const setModalData = id => {
-    const selectContact = contacts.find(contact => contact.id === id);
-    setSelectedContact(selectContact);
+ 
+  
+  const setModalData = () => {
+   const selectContact = { id, name, number };
+    setSelectedContact(selectContact );
   };
 
   function stringAvatar(name) {
@@ -74,7 +75,7 @@ export const ContactItem = ({ name, number, id }) => {
             <ModalPictureWrapper> 
                               <Avatar
               sx={{fontSize:"12px"}}
-              onClick={() => setModalData(id)}
+              onClick={() => setModalData()}
                   {...stringAvatar(Object.values(name).join(''))}
                   
             />
@@ -91,7 +92,7 @@ export const ContactItem = ({ name, number, id }) => {
             <IconButton sx={{   pl: 3 }}
                 edge="end"
                         aria-label="Edit"
-                 onClick={() => setModalData(id)}
+                 onClick={() => setModalData()}
             
               >
                 <EditIcon />

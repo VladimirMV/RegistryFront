@@ -14,6 +14,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { logInUser } from 'redux/auth/auth-operations';
+import { customStylesFonLogin } from 'styles/fonStyle';
 
  
 
@@ -59,9 +60,10 @@ export default function Login() {
       <Grid
         container
         component="main"
+        style={ customStylesFonLogin }
         sx={{
           height: '100vh',
-          backgroundImage: `url("https://catherineasquithgallery.com/uploads/posts/2023-02/thumbs/1676736927_catherineasquithgallery-com-p-svetlo-salatovii-fon-162.jpg")`,
+         
           backgroundRepeat: 'no-repeat',
           backgroundColor: t =>
             t.palette.mode === 'light'

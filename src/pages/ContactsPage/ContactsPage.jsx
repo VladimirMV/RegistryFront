@@ -9,7 +9,7 @@ import  ContactList  from 'components/ContactList/ContactList';
 import  Filter  from 'components/Filter/Filter';
 import { Section } from 'components/Section/Section';
 import { Title } from 'components/Title/Title';
-
+import { customStylesFonContacts } from 'styles/fonStyle';
 const defaultTheme = createTheme({
   palette: {
     primary: {
@@ -29,11 +29,8 @@ const Contacts = () => {
       <Grid
         container
         component="main"
+        style={customStylesFonContacts }
         sx={{
-      backgroundImage: `url("https://phonoteka.org/uploads/posts/2022-01/1643604165_44-phonoteka-org-p-gradientnii-fon-dlya-prezentatsii-45.jpg")`,
-
-      // backgroundImage: `url("https://catherineasquithgallery.com/uploads/posts/2023-02/thumbs/1676736256_catherineasquithgallery-com-p-svetlo-olivkovii-fon-9.jpg")`,
-        // backgroundImage: `url('../../img/contact-fon.jpg')`,
           backgroundRepeat: 'no-repeat',
           backgroundColor: t =>
             t.palette.mode === 'light'

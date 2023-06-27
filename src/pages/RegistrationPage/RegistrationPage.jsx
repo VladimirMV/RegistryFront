@@ -15,6 +15,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { registerUser } from 'redux/auth/auth-operations';
 import { useState } from 'react';
+import { customStylesFonRegistration } from 'styles/fonStyle';
 
 const defaultTheme = createTheme({
   palette: {
@@ -65,9 +66,10 @@ export default function Register() {
       <Grid
         container
         component="main"
+        style={customStylesFonRegistration }
         sx={{
           height: '100vh',
-          backgroundImage: `url("https://phonoteka.org/uploads/posts/2022-02/thumbs/1645103314_44-phonoteka-org-p-fon-zelenii-gradient-nezhnii-47.jpg")`,
+          
           backgroundRepeat: 'no-repeat',
           backgroundColor: t =>
             t.palette.mode === 'light'
