@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "RegistryFront",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VladimirMV.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://vladimirmv.github.io/RegistryFront/",
   "dependencies": {
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.11.0",
